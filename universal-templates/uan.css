@@ -1,0 +1,153 @@
+body {
+	font-family: calibri, sans-serif;
+}
+div.container {
+	margin-left: 10%;
+	margin-right: 10%;
+	float: left;
+	display: block;
+}
+
+footer.navi {
+	float: right;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+}
+
+div.bar {
+	position: fixed;
+	/*border: solid 1px purple;*/
+	max-width: 900px;
+	max-height: 2000px;
+}
+
+div.bar:hover {
+	width: 900px;
+}
+
+img.cancel {
+	display: none;
+	position: relative;
+	top: 0;
+	left: 0;
+	z-index: 99;
+	width: 40px;
+	height: 40px;
+	float: left;
+}
+
+img.menu {
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	float: left;
+
+}
+
+label {
+	cursor: pointer;
+	background: url(/media/menu.svg) no-repeat left center;
+	/*border: solid 1px red;*/
+	float: left;
+	background-size: 30px 30px;
+	height: 45px;
+	width: 40px;
+}
+
+input#HBMenu {
+	display: none;
+	float: left;
+}
+
+input:checked ~ label {
+	background: url(/media/redx.svg) no-repeat left center;
+	background-size: 30px 30px;
+}
+
+input:checked ~ .menucontent {
+	max-height: 500px;
+}
+
+input:checked ~ #navi {
+	width: 500px;
+}
+
+.menucontent {
+	max-height: 0px;
+	overflow: hidden;
+}
+
+#navi a {
+	color: #dd0e0e;
+	text-decoration: none;
+}
+
+#navi {
+	width: 0px;
+	float: left;
+	/*border: solid 1px black;*/
+	padding-left: 0px;
+	height: 2000px;
+}
+
+#navi ul {
+	position: absolute;	
+	list-style-type: none;
+	/*border: solid 1px green;*/ 
+	margin-left: 225px;
+	padding-left: 0px;
+	top: 0px;
+}
+
+#navi > li {
+	list-style-type: none;
+	position: relative;
+	/*border: solid 1px red;*/
+	top: 0px;
+	width: 240px;
+	height: 20px;
+	float: left;
+	padding: 6px;
+	font-weight: bold;
+	background-image: url(/media/menubg.svg); 
+	text-align: center;
+}
+
+#navi > li:first-child {
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+}
+
+#navi > li:last-child {
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+
+#navi > li > ul > li {
+	display: none;
+	position: relative;
+	z-index: 1;
+	padding: 7px;
+	background-image: url(/media/menubg.svg);
+	height: 15px;
+	width: 200px;
+	/*border: 1px solid red;*/
+}
+
+#navi > li:hover > ul > li {
+	display: block;
+	
+}
+
+#navi > li > ul > li:last-child {
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+#navi > li > ul > li:first-child {
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+
+

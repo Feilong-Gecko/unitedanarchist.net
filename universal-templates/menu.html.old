@@ -1,0 +1,11 @@
+{% load cms_tags menu_tags %}
+
+	<ul class="navi">
+		<a class="navi" href="https://unitedanarchist.net">
+			<img src="/media/Home.png" alt="Home" style="width:50px;height:50px;">
+			</img>
+		</a>
+		{% show_menu 1 100 100 100 %}
+		{{ node.level }}
+		{#% show_sub_menu 1 0 %#}
+	</ul>
